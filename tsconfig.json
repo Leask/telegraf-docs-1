@@ -3,6 +3,8 @@
 		"strict": true,
 		"module": "NodeNext",
 		"target": "es2021",
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
 		"outDir": "./dist-examples"
 	},
 	"include": ["./global.d.ts", "./examples"],

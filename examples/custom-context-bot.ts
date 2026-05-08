@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
-import { Context, Telegraf, Telegram } from 'telegraf'
-import { Update, UserFromGetMe } from 'typegram'
+import { Context, Telegraf, Telegram } from 'telegraf-hardened'
+import { Update, UserFromGetMe } from 'telegraf-hardened/types'
 
 const token = process.env.BOT_TOKEN
 if (token === undefined) {

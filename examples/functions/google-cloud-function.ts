@@ -1,6 +1,6 @@
 // TODO: this needs its own full example like the one for aws-lambda
 
-import { Telegraf } from "telegraf";
+import { Telegraf } from "telegraf-hardened";
 
 const bot = new Telegraf(token);
 

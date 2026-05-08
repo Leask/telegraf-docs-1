@@ -28,7 +28,7 @@ But, remember that all messages are not text messages either! Messages can be `t
 
 ```TS (Node)
 // import filters
-import { message, callbackQuery, channelPost } from "telegraf/filters"
+import { message, callbackQuery, channelPost } from "telegraf-hardened/filters"
 
 bot.on(message("text"), ctx => {
 	// Use ctx.message.text

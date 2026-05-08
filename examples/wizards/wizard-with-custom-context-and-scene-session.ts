@@ -1,4 +1,4 @@
-import { Composer, Context, Markup, Scenes, session, Telegraf } from "telegraf";
+import { Composer, Context, Markup, Scenes, session, Telegraf } from "telegraf-hardened";
 
 /**
  * It is possible to extend the session object that is available to each wizard.
@@ -49,7 +49,7 @@ const superWizard = new Scenes.WizardScene(
 		await ctx.reply(
 			"Step 1",
 			Markup.inlineKeyboard([
-				Markup.button.url("❤️", "http://telegraf.js.org"),
+				Markup.button.url("❤️", "https://github.com/telegraf-hardened/telegraf-docs"),
 				Markup.button.callback("➡️ Next", "next"),
 			]),
 		);

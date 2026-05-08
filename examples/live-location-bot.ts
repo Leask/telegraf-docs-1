@@ -1,4 +1,4 @@
-import { Telegraf } from "telegraf";
+import { Telegraf } from "telegraf-hardened";
 
 // @ts-ignore
 function sendLiveLocation(ctx) {

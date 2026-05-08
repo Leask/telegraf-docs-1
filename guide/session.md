@@ -9,7 +9,7 @@ Telegraf sessions are also important for Scenes and Wizards, which internally us
 To use session in Telegraf, import the builtin session middleware, like so:
 
 ```TS (Node)
-import { Telegraf, session } from "telegraf";
+import { Telegraf, session } from "telegraf-hardened";
 
 const bot = new Telegraf(token);
 bot.use(session());
@@ -20,8 +20,8 @@ bot.use(session());
 This attaches ctx.session to the context object. To let Typescript know about this, we want to augment the Context type:
 
 ```TS (Node)
-import { Telegraf, session, type Context } from "telegraf";
-import type { Update } from "telegraf/types";
+import { Telegraf, session, type Context } from "telegraf-hardened";
+import type { Update } from "telegraf-hardened/types";
 
 interface MyContext <U extends Update = Update> extends Context<U> {
 	session: {

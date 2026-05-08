@@ -3,7 +3,7 @@
 It's always recommended that you experiment and do a quick overview with different requests in case of an update to the core Telegram or Telegraf docs, it could be as simple as logging the `ctx` to the console:
 
 ```TS (Node)
-import { Telegraf } from "telegraf";
+import { Telegraf } from "telegraf-hardened";
 
 const bot = new Telegraf(process.env.BOT_TOKEN); // Your bot token 
 
@@ -43,6 +43,7 @@ __Telegraf passes every request to your middlewares as a `ctx` object, and each 
         apiRoot: 'https://api.telegram.org',
         apiMode: 'bot',
         webhookReply: boolean,
+        fetch: [Function],
         agent: [Agent],
         attachmentAgent: undefined /* differs based on the configuration */,
         testEnv: boolean

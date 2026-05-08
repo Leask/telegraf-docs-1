@@ -1,5 +1,5 @@
 import http from "serverless-http";
-import { Telegraf } from "telegraf";
+import { Telegraf } from "telegraf-hardened";
 
 const token = process.env.BOT_TOKEN!;
 const bot = new Telegraf(token);

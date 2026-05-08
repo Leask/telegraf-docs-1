@@ -1,4 +1,4 @@
-import { Context, Scenes, session, Telegraf } from "telegraf";
+import { Context, Scenes, session, Telegraf } from "telegraf-hardened";
 
 /**
  * We can define our own context object.

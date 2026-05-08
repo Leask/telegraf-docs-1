@@ -1,11 +1,11 @@
-import { Telegraf, Markup } from "telegraf";
+import { Telegraf, Markup } from "telegraf-hardened";
 
 const { BOT_TOKEN } = process.env;
 if (!BOT_TOKEN) throw new Error('"BOT_TOKEN" env var is required!');
 const bot = new Telegraf(BOT_TOKEN);
 
 const keyboard = Markup.inlineKeyboard([
-	Markup.button.url("❤️", "http://telegraf.js.org"),
+	Markup.button.url("❤️", "https://github.com/telegraf-hardened/telegraf-docs"),
 	Markup.button.callback("Delete", "delete"),
 ]);
 

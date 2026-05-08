@@ -1,5 +1,5 @@
-import { Telegraf, Markup } from "telegraf";
-import { InlineQueryResult } from "telegraf/types";
+import { Telegraf, Markup } from "telegraf-hardened";
+import { InlineQueryResult } from "telegraf-hardened/types";
 
 const bot = new Telegraf(token);
 
@@ -17,7 +17,7 @@ bot.on("inline_query", async ctx => {
 				id: thumbnail,
 				title: title,
 				description: title,
-				thumb_url: thumbnail,
+				thumbnail_url: thumbnail,
 				input_message_content: {
 					message_text: title,
 				},

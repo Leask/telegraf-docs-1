@@ -1,4 +1,4 @@
-import { Context, Scenes, session, Telegraf } from "telegraf";
+import { Context, Scenes, session, Telegraf } from "telegraf-hardened";
 
 /**
  * It is possible to extend the session object that is available to each scene.

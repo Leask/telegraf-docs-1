@@ -2,7 +2,9 @@
 	"compilerOptions": {
 		"strict": true,
 		"module": "NodeNext",
-		"target": "es2021"
+		"target": "es2021",
+		"allowImportingTsExtensions": true,
+		"noEmit": true
 	},
 	"include": ["echo.ts"]
 }

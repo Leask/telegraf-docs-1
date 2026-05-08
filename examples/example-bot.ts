@@ -1,4 +1,4 @@
-import { Context, session, Telegraf } from "telegraf";
+import { Context, session, Telegraf } from "telegraf-hardened";
 
 const { reply, fork } = Telegraf;
 

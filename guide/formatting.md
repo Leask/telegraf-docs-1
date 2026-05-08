@@ -52,7 +52,7 @@ While HTML and Markdown are the most popular options, a new feature (since v4.10
 > Internally, fmt creates entities. Read more about entities here: https://core.telegram.org/bots/api#formatting-options
 
 ```TS (Node)
-import { fmt, bold, italic, underline } from "telegraf/format";
+import { fmt, bold, italic, underline } from "telegraf-hardened/format";
 
 // Inside a handler
 ctx.sendMessage(fmt`
@@ -63,7 +63,7 @@ ${bold`Bold`}, ${italic`italic`}, and ${underline`underline`}!
 You can also naturally nest according to [Formatting options](https://core.telegram.org/bots/api#formatting-options).
 
 ```TS (Node)
-import { fmt, bold, italics, mention } from "telegraf/format";
+import { fmt, bold, italics, mention } from "telegraf-hardened/format";
 
 // Inside a handler
 ctx.reply(fmt`
@@ -91,10 +91,10 @@ ctx.replyWithPhoto(file.id, { caption: bold(fileName) });
 
 ### Available format helpers:
 
-You need to import the helpers from `"telegraf/format"`. Example:
+You need to import the helpers from `"telegraf-hardened/format"`. Example:
 
 ```TS (Node)
-import { fmt, bold } from "telegraf/format";
+import { fmt, bold } from "telegraf-hardened/format";
 ```
 
 Once imported, you can use them as documented below:

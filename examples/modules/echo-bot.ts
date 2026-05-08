@@ -1,7 +1,7 @@
 // To run a Telegraf module, use:
 // $> telegraf -t `BOT TOKEN` echo-bot.js
 
-import { Composer, Markup } from "telegraf";
+import { Composer, Markup } from "telegraf-hardened";
 
 const bot = new Composer();
 
@@ -33,7 +33,7 @@ bot.help(async ctx => {
 });
 
 const keyboard = Markup.inlineKeyboard([
-	Markup.button.url("❤️", "http://telegraf.js.org"),
+	Markup.button.url("❤️", "https://github.com/telegraf-hardened/telegraf-docs"),
 	Markup.button.callback("Delete", "delete"),
 ]);
 

@@ -1,4 +1,4 @@
-import { Telegraf, Markup } from "telegraf";
+import { Telegraf, Markup } from "telegraf-hardened";
 
 const bot = new Telegraf(token);
 

@@ -1,4 +1,4 @@
-import { Telegraf, Markup } from "telegraf";
+import { Telegraf, Markup } from "telegraf-hardened";
 import fs from "fs";
 
 const AnimationUrl1 = "https://media.giphy.com/media/ya4eevXU490Iw/giphy.gif";

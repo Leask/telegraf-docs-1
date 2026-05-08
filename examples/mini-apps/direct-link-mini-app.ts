@@ -1,5 +1,5 @@
-import { Telegraf } from "telegraf";
-import { link } from "telegraf/format";
+import { Telegraf } from "telegraf-hardened";
+import { link } from "telegraf-hardened/format";
 
 const bot = new Telegraf(process.env.BOT_TOKEN!);
 

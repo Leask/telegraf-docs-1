@@ -1,4 +1,4 @@
-import { Context, session, Telegraf } from "telegraf";
+import { Context, session, Telegraf } from "telegraf-hardened";
 
 interface SessionData {
 	messageCount: number;

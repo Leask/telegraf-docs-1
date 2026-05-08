@@ -4,7 +4,7 @@ To build a bot, you first need a bot token. You can get one by talking to [@botf
 
 <!-- TODO@mkr// New achievement: Acquired Token! -->
 
-Start by creating a folder, initialising a project, and installing Telegraf.
+Start by creating a folder, initialising a project, and installing telegraf-hardened.
 
 ```shell
 # create folder
@@ -13,8 +13,8 @@ mkdir my-first-bot
 # enter folder
 cd my-first-bot
 
-# install Telegraf
-npm install telegraf
+# install telegraf-hardened
+npm install telegraf-hardened
 
 # install typescript as a dev-dependency (optional, but recommended)
 npm install --dev typescript
@@ -30,7 +30,7 @@ Open your favourite code editor (we recommend [Visual Studio Code](https://code.
 The first thing you need to do is to import Telegraf and create a bot instance. You will need to pass your bot token while doing so. Our recommended way to pass the token is via an environment variable. If you don't know how, we have [an article on that!](TODO@mkr//write-article)
 
 ```TS (Node)
-import { Telegraf } from "telegraf";
+import { Telegraf } from "telegraf-hardened";
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 ```
@@ -63,7 +63,7 @@ Let's put all our pieces together.
 
 ```TS (Node)
 
-import { Telegraf } from "telegraf";
+import { Telegraf } from "telegraf-hardened";
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 

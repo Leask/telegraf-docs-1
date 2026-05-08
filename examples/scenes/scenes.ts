@@ -1,4 +1,4 @@
-import { Scenes, session, Telegraf } from "telegraf";
+import { Scenes, session, Telegraf } from "telegraf-hardened";
 
 // Handler factories
 const { enter, leave } = Scenes.Stage;

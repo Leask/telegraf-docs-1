@@ -1,5 +1,5 @@
 import express from "express";
-import { Telegraf } from "telegraf";
+import { Telegraf } from "telegraf-hardened";
 
 const bot = new Telegraf(token);
 const app = express();

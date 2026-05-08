@@ -1,17 +1,19 @@
-import { Telegraf } from "telegraf";
-import { HttpsProxyAgent } from "https-proxy-agent";
+import { FetchClient } from "@telegraf-hardened/fetch";
+import { Telegraf } from "telegraf-hardened";
 
-const { HTTPS_PROXY_HOST, HTTPS_PROXY_PORT } = process.env;
+const { BOT_TOKEN, PROXY_URL } = process.env;
 
-const agent = new HttpsProxyAgent({
-	host: HTTPS_PROXY_HOST,
-	port: HTTPS_PROXY_PORT,
+if (!BOT_TOKEN) throw new Error('"BOT_TOKEN" env var is required!');
+if (!PROXY_URL) throw new Error('"PROXY_URL" env var is required!');
+
+const bot = new Telegraf(BOT_TOKEN, {
+	telegram: {
+		proxy: {
+			proxy: PROXY_URL,
+			FetchClient,
+		},
+	},
 });
-
-const bot = new Telegraf(token, { telegram: { agent } });
-
-// If you want to use agent for fetching files, as well, use:
-// const bot = new Telegraf(BOT_TOKEN, { telegram: { agent, attachmentAgent: agent } })
 
 bot.start(ctx => ctx.reply("Hello"));
 bot.help(ctx => ctx.reply("Help message"));

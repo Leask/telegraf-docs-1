@@ -1,4 +1,4 @@
-import { Telegraf, Markup } from "telegraf";
+import { Telegraf, Markup } from "telegraf-hardened";
 
 if (process.env.PROVIDER_TOKEN === undefined) {
 	throw new TypeError("PROVIDER_TOKEN must be provided!");
@@ -38,7 +38,7 @@ const shippingOptions = [
 
 const replyOptions = Markup.inlineKeyboard([
 	Markup.button.pay("💸 Buy"),
-	Markup.button.url("❤️", "http://telegraf.js.org"),
+	Markup.button.url("❤️", "https://github.com/telegraf-hardened/telegraf-docs"),
 ]);
 
 const bot = new Telegraf(token);
